@@ -1,3 +1,5 @@
+#The virtual machine object
+
 class Machine(object):
 
     def __init__(self, program):
@@ -58,6 +60,16 @@ class Machine(object):
         """reg a - reg b"""
         return getattr(self, a) - getattr(self, b)
 
+# Gets command line arguments
+
+def getArgs:
+    pass;
+    
+def getCode:
+    pass;
+    
+# Create an instance of the virtual machine
+
 m = Machine((
     # If b is zero, then we are done.
     ('test', 'zero', 'b'),      # if b == 0
@@ -80,3 +92,5 @@ m.a = 56
 m.b = 12
 m.execute()
 print m.a
+    
+    
