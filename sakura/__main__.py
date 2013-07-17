@@ -1,14 +1,20 @@
 # Import stuff
+
 from machine import *
+import strap
 
-# Gets command line arguments
+# Get command line arguments
 
-def getArgs():
-    pass
-    
-def getCode():
-    pass
-    
+args = strap.getArgs()
+
+# Get raw code from file
+
+code = strap.getCode(args[1])
+
+# Covert code into tuples
+
+tupleCode = strap.tuplize(code)
+
 # Create an instance of the virtual machine
 
 m = Machine((
