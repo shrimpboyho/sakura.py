@@ -1,0 +1,10 @@
+test zero, b
+branch None
+copy t, a
+test lt, t, b
+branch 7
+exec t, sub, t, b
+jump 3
+copy a, b
+copy b, t
+jump 0

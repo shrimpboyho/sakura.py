@@ -1,4 +1,8 @@
+# Bootstrapper 
+
 import sys
+import io
+import re
 
 # Gets command line arguments
 
@@ -9,13 +13,29 @@ def getArgs():
 # Reads in data fom raw file   
 
 def getCode(filepath):
-    print("\nReading In raw data from: " + filepath + "\n")
-    code = ""
-    return code
+    
+    return io.open(filepath, 'rt').read()
 
 # Converts raw file code into organized tuples
 
 def tuplize(code):
 	
-	codeTuple = []
-	return codeTuple
+	codeList = code.split('\n')
+	dubsy = []
+
+	for line in codeList:
+		dubsy.append((re.split(r'[,\s]+', line)))
+	
+	dubsy = dubsy[0:-1]
+
+	# Convert number strings to integers and convert None strings to actual None's
+
+	for i, thing in enumerate(dubsy):	
+		for k, thingy in enumerate(thing):	
+			if re.compile('[0-9]+').match(thingy) != None:
+				dubsy[i][k] = int(thingy)
+			if re.compile('None').match(thingy) != None:
+				dubsy[i][k] = None
+
+	return tuple(dubsy)
+	

@@ -1,3 +1,5 @@
+# The main virtual machine object
+
 class Machine(object):
 
     def __init__(self, program):
