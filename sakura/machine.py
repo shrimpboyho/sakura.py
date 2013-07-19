@@ -7,7 +7,7 @@ class Machine(object):
         self.program = program
 
         # Registers
-        self.a = self.b = self.t = None
+        self.a = self.b = self.c = self.d = self.t = None
 
         # Whether to branch
         self.flag = False
@@ -30,7 +30,7 @@ class Machine(object):
         """Duplicates register b in register a"""
         setattr(self, a, getattr(self, b))
 
-    def i_set(self, a, b):
+    def i_load(self, a, b):
         """Sets register a to the value b"""
         setattr(self, a, b)
 
@@ -51,6 +51,9 @@ class Machine(object):
     def i_jump(self, line):
         """Jump to line"""
         self.pc = line
+
+    def i_halt(self):
+        self.pc = None
 
     def o_zero(self, reg):
         """Is reg zero?"""
