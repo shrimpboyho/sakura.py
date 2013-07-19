@@ -1,0 +1,1 @@
+{"ts":1374251908733,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"test zero, b\nbranch None\ncopy t, a\ntest lt, t, b\nbranch 7\nexec t, sub, t, b\njump 3\ncopy a, b\ncopy b, t\njump 0\n"]],"start1":0,"start2":0,"length1":0,"length2":110}]],"length":110}

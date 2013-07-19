@@ -14,11 +14,14 @@ class Machine(object):
 
         # Code pointer
         self.pc = 0
-
+    
+        # Set up the table output
+        print("\nPC\t%A\t%B\t%T\tFLAG\tInstruction:\n")
+        
     def execute(self):
         while self.pc is not None:
             i = self.program[self.pc]
-            print self.pc, self.a, self.b, self.t, self.flag, i
+            print str(self.pc) + "\t" + str(self.a) + "\t" + str(self.b) + "\t" + str(self.t) + "\t" + str(self.flag) + "\t" , i
             instr, rest = i[0], i[1:]
             self.pc += 1 # Don't forget to increment the counter
             getattr(self, 'i_'+instr)(*rest)
