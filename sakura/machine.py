@@ -62,6 +62,15 @@ class Machine(object):
     def o_lt(self, a, b):
         return getattr(self, a) < getattr(self, b)
 
+    def o_gt(self, a, b):
+        return getattr(self, a) > getattr(self, b)
+
+    def o_eq(self, a, b):
+        return getattr(self, a) == getattr(self, b)
+
+    def o_add(self, a, b):
+        return getattr(self, a) + getattr(self, b)
+
     def o_sub(self, a, b):
         """reg a - reg b"""
         return getattr(self, a) - getattr(self, b)
