@@ -5,3 +5,15 @@ sakura.py [![Build Status](https://travis-ci.org/shrimpboyho/sakura.py.png?branc
 
 
 A Virtual Machine Written in Python
+
+###How To Run
+
+Invoke the command:
+
+```
+python sakura file.sak
+```
+
+##Machine Assembly Guide
+
+TODO

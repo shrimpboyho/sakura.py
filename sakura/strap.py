@@ -23,6 +23,10 @@ def tuplize(code):
 	codeList = code.split('\n')
 	dubsy = []
 
+	for i, line in enumerate(codeList):
+		if line.find(';') != -1:
+			codeList[i] = line[:line.find(';')].strip()
+
 	for line in codeList:
 		dubsy.append((re.split(r'[,\s]+', line)))
 	
