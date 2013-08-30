@@ -1,11 +1,30 @@
 #ifndef SAKURA_H
 #define SAKURA_H
 
+#include <iostream>
+#include <vector>
+
 class sakuraMachine{
 
         private:
-  
+                // Flag and program counter
+                bool flag;
+                int pc;
+                
+                // Registers
+                int a;
+                int b;
+                int c;
+                int d;
+                int t;
+                
+                // Program represented in memory
+                std::vector <std::vector<std::string>> program;
+                
         public:
+        
+                // Public execution function
+                int execute();
 
 };
 
