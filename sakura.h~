@@ -8,8 +8,8 @@
  *	Holds multiple registers
  * */
 
-typedef std::vector < std::string > TOKENS;
-typedef std::vector < std::vector <std::string> > PROGRAM;
+typedef std::vector <std::string> TOKENS;
+typedef std::vector <std::vector<std::string>> PROGRAM;
 typedef struct reg{
 
 	int a;
